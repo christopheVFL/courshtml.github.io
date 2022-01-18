@@ -1,0 +1,141 @@
+<!--Por créer le type taper ! et tapé sur entrée-->
+<!DOCTYPE html>
+<!--changée la langue en langue du site-->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- le titre de l'onglet -->
+    <title>Cours HTML</title>
+    <!--Icone de l'onglet-->
+    <link rel="shortcut icon" href="logohtml.png">
+</head>
+<body>
+    <!--en-tête du body-->
+    <header>
+        <h1>Ma page de cours HTML 5</h1>
+    </header>
+        <h2>Les 6 différents types de titre</h2>
+        <h1>Titre h1</h1>
+        <h2>Titre h2</h2>
+        <h3>Titre h3</h3>
+        <h4>Titre h4</h4>
+        <h5>Titre h5</h5>
+        <h6>Titre h6</h6>
+        <h2>Le paragraphe et mise en valeurs du texte</h2>
+        <p>Texte basique.<br>
+        <!--lorem50 = paragraphe latin exemple-->    
+        Paragraphe de base en lorem50: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur dignissimos expedita consequuntur dolore earum quas enim, beatae mollitia officiis debitis nostrum animi tenetur reiciendis nesciunt velit perferendis, deleniti neque rem vero dolorum ex. Saepe, sapiente cumque vel iusto mollitia accusamus architecto excepturi possimus! Tenetur in, expedita blanditiis omnis odit recusandae?    
+        <em>Texte en italique.</em><br>
+        <strong>Texte en gras.</strong><br>
+        <mark>Texte surlignez</mark></p>
+        <h2>Photo</h2>
+        <img src="image-paysage.jpg" height="200" alt="image-paysage">
+        <h2>Liste</h2>
+            <ul>
+                <li>UL = Unordered list / liste non ordonné </li>
+                <li>UL = Unordered list / liste non ordonné </li>
+                <li>UL = Unordered list / liste non ordonné </li>
+            </ul>
+            <ol>
+                <li>OL = Ordered list / liste ordonné</li>
+                <li>OL = Ordered list / liste ordonné</li>
+                <li>OL = Ordered list / liste ordonné</li>
+            </ol>
+        <h2>Tableaux</h2>
+        <!--tableau qui prend la moitié de la largeur de la page donnée-->
+        <table border="1" width="50%">
+            <!--Légende-->
+            <caption>Populations d'Europe</caption>
+            <!--En-tête / un th = une colonne-->
+            <thead>
+                <tr>
+                    <th>Pays</th>
+                    <th>Populations</th>
+                </tr>
+            </thead>
+            <!--Corps du tableau-->
+            <tbody>
+                <tr>
+                    <td>France</td>
+                    <td>66M</td>
+                </tr>
+                <tr>
+                    <td>Allemagne</td>
+                    <td>82M</td>
+                </tr>
+                <tr>
+                    <td>Espagne</td>
+                    <td>47M</td>
+                </tr>
+            </tbody>
+        </table>
+        <!--insertion d'icone-->
+        <h2><span>&#9759;</span>Liens<span>&#9759;</span></h2>
+        <!--Liens cliquable affichant sur le même onglet-->
+        <!--<br> = Passage à la ligne-->
+        <a href="https://www.toptal.com/designers/htmlarrows/symbols/"> Icones en HTML</a><br>
+        <!--Liens cliquable affichant sur un nouvelle onglet-->
+        <a href="https://htmlcheatsheet.com/" target="_blank">HTML Cheat Sheet</a><br>
+        <!--liens naviguant sur les autre page du site-->
+        <a href="nom-de-page.html">Page 2</a>
+        <h3>liens vers ancre</h3>
+        <!--balise depart-->
+        <a href="#voitures">les voitures</a><br>
+        <a href="#bateaux">les bateaux</a><br>
+        <a href="#avions">les avions</a><br>
+        <!--balise d'arrivées-->
+        <h4 id="voitures">les voitures</h4>
+        <h4 id="bateaux">les bateaux</h4>
+        <h4 id="avions">les avions</h4>
+        <h3>liens infobulle au passage de souris sur liens</h3>
+        <a href="nom-de-page.html"title="je ne suis pas encore créer">page 2</a>
+        <h3>liens infobulle au passage de souris sur image</h3>
+        <img src="image-paysage.jpg" alt="image de paysage" title="que c'est beau a voir !">
+        <h2>Vidéos</h2>
+        <!--video 250px de hauteur (height) jouer automatiquement(autoplay) en boucle (loop) muté (muted)-->
+        <video src="video.mp4.mp4" height="250" autoplay loop muted></video>
+        <h2>Formulaire</h2>
+        <form action="/action.php" method="POST">
+            <!--case avec des lettres + chiffre+ caractère spéciaux-->
+            <label for="name">Nom: </label>
+            <input id="name" type="text" placeholder="Entrez votre nom"><br>
+            <!--case avec que des chiffres de 0 à 99 et de 1 en 1 avec une valeur de base de 18 (value)-->
+            <label for="age">Age: </label>
+            <input id="age" type="number" min="0" max="99" step="1" value="18"><br>
+            <!--input select-->
+            <label for="gender">Genre</label>
+            <select id="gender">
+                <option value="homme">Homme</option>
+                <!--option selectionner de base (selected)-->
+                <option selected value="femme">Femme</option>
+            </select><br>
+            <!--input radio-->
+            <div>
+                <input type="radio" name="type" checked id="human">
+                <label for="human">Humain</label>
+                <input type="radio" name="type" id="dog">
+                <label for="dog">Chien</label>
+                <input type="radio" name="type" id="cat">
+                <label for="cat">Chat</label>
+                <!--Si on enlève le name nous pouvons tous les selectionner donc la etre chiens chat et humain a la fois-->
+            </div>
+            <!--Zone de texte-->
+            <textarea cols="30" rows="10" placeholder="Entrez votre deande ici"></textarea><br>
+            <!--Input checkbox-->
+            <label>
+                <input type="checkbox"/>Accepter les règles
+                <input type="checkbox"/>Être contacté
+            </label><br>
+            <!--input submit-->
+            <input type="submit" value="Valider">
+        </form><br>
+    <!--pied de page-->
+    <footer>
+        <!--Mail & envoi de fichier-->
+        <a href="mailto:verfaillie.christophe97@outlook.fr">Ecrivez-moi !</a>
+        <br>
+        <a href="notice.txt.TXT" download="Nom-du-fichier">Télécharger la notice</a>
+    </footer>
+</body>
+</html>
